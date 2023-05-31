@@ -1,3 +1,5 @@
+
+
 import streamlit as st
 # import module
 import requests
@@ -72,14 +74,22 @@ def scrapper( tag, Page):
 
 def main():
     st.title("Scrapper App[Stackoverflow]")
-    st.write("Enter Tag and Number of pages to get the Result.")
+    st.write("Enter Tag and  of pages to get the Result.")
 
     tag = st.text_input("Category: ")
     Page = st.number_input("Number of Pages :", step=1)
+    
+    val = st.text_input("User: ")
+    users = ["user404", "Satyam_"]
 
     if st.button("Export to CSV"):
-        result = scrapper( tag, Page)
-        st.success(result)
+
+        if val in users:
+            result = scrapper( tag, Page)
+            st.success(result)
+        else:
+            st.success(f"Invalid Users : {val}", icon="🔴")
+
 
 
 if __name__ == "__main__":
@@ -88,3 +98,4 @@ if __name__ == "__main__":
     
 
  
+
