@@ -19,15 +19,14 @@ def scrapper( tag, Page):
     
     Title = []
     view = []
-    tag = "python"
-    page = 3
+   
     
     for i in range(Page):
         st.success(f"Processing page : {i}", icon="✅")
         # url
         # url = "https://stackoverflow.com/questions/tagged/"+tag+"/?tab=votes&page="+str(page)
         url= "https://stackoverflow.com/questions/tagged/"+tag+"?tab=votes&page="+str(i)
-        
+        print(url)
 
         # pass the url
         # into getdata function
