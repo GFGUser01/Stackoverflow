@@ -26,7 +26,7 @@ def scrapper( tag, Page):
     for i in range(Page):
         st.success(f"Processing page : {i}", icon="✅")
         # url
-        url = "https://stackoverflow.com/questions/tagged/"+tag+"/?tab=votes&page="+str(page)
+        url = "https://stackoverflow.com/questions/tagged/"+tag+"/?sort=MostVotes&page="+str(page)
         # url= "https://stackoverflow.com/questions/tagged/"+tag+"?tab=Newest&page="+str(i)
         print(url)
 
