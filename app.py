@@ -26,17 +26,6 @@ def scrapper( tag, Page):
         print(url)
 
         # pass the url
-
-    
-          
-            
-    
-
-          
-          Expand Down
-    
-    
-  
         # into getdata function
         htmldata = getdata(url)
         soup = BeautifulSoup(htmldata, 'html.parser')
